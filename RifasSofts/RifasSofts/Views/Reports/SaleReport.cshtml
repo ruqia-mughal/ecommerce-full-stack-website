@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RifasSofts.Models.order>
+
+
+<h2 class="text text-center text-danger">Sale Report</h2>
+<table class="table table-bordered table-hover table-danger">
+    <tr style="background-color:indianred">
+        <th>ORDER Number</th>
+        <th>ORDER DATE</th>
+        <th> CUSTOMER NAME</th>
+        <th> CUSTOMER EMAIL </th>
+        <th> CUSTOMER ADDRESS</th>
+        <th> CUSTOMER CONTACT</th>
+        <th> ORDER STATUS</th>
+        <th> ORDER TYPE</th>
+        <th> Action</th>
+    </tr>
+
+    @foreach (var o in Model)
+    {
+        <tr>
+            <td align="center">@o.ORDER_ID</td>
+            <td align="center">@DateTime.Parse(o.ORDER_DATE.ToString()).ToLongDateString()</td>
+            <td align="center">@o.ORDER_NAME</td>
+            <td align="center">@o.ORDER_EMAIL</td>
+            <td align="center">@o.ORDER_ADDRESS</td>
+            <td align="center">@o.ORDER_CONTACT</td>
+            <td align="center">@o.ORDER_STATUS</td>
+            <td align="center">@o.ORDER_TYPE</td>
+            <td align="center"><a href="@Url.Action("Invoice","Reports",new{ id=o.ORDER_ID})" class="btn btn-danger btn-block">View Invoice</a></td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<RifasSofts.Models.Prod>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="btn btn-block btn-theme " >Index Categories</h2>
+
+<p>
+
+    <a class="btn btn-warning" href="@Url.Action("Create","Prods")"> Add New Product </a>
+
+
+</p>
+<table class="table table-bordered table-hover table-condensed table-responsive table-striped table-main">
+    <tr>
+        <th>
+            product picture
+        </th>
+        <th>
+            category
+        </th>
+        <th>
+            product name
+        </th>
+        <th>
+            product description
+        </th>
+
+        <th>
+            purchase price
+        </th>
+        <th>
+            sale price
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        <img src="@Url.Content(item.PROD_PICTURE)" height="100" width="100" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Category.CATEGORY_NAME)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PROD_NAME)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PROD_DESCRIPTION)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.PROD_PURCHASE_PRICE)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PROD_SALE_PRICE)
+    </td>
+    <td>
+        <a class="btn btn-warning fa fa-x fa-edit " href="@Url.Action("Edit","Prods",new { id=item.PROD_ID })">  </a>
+        <a class="btn btn-success fa fa-x fa-book fa-list" href="@Url.Action("Details","Prods",new { id=item.PROD_ID })">  </a>
+        <a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete","Prods",new { id=item.PROD_ID })">  </a>
+
+    </td>
+</tr>
+}
+
+</table>

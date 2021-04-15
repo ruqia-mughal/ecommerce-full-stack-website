@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RIFAS- softs</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="~/Content/Customer/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Content/Customer/images/apple-touch-icon.png">
+
+
+    @Styles.Render("~/Content/Customer/css/bootsnav.css")
+    @Styles.Render("~/Content/Customer/css/bootstrap.min.css")
+    @Styles.Render("~/Content/Customer/css/style.css")
+    @Styles.Render("~/Content/Customer/css/responsive.css")
+    @Styles.Render("~/Content/Customer/css/custom.css")
+
+    @Styles.Render("~/Content/Customer/css/easy-responsive-tabs.css")
+  
+
+    <!-- //for bootstrap working -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+    <div class="header" id="home">
+        <div class="container">
+            <ul>
+                <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
+                <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-user" aria-hidden="true"></i> Sign Up </a></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i> Call : 01234567898</li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-bot">
+        <div class="header-bot_inner_wthreeinfo_header_mid">
+            <div class="col-md-4 header-middle">
+                <form action="#" method="post">
+                    <input type="search" name="search" placeholder="Search here..." required="">
+                    <input type="submit" class="fa fa-search" value="Search">
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+            <!-- header-bot -->
+            <div class="col-md-4 logo_agile">
+                <h1><a href="#"><span>R</span>ifsa Softs<i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+            </div>
+            <!-- header-bot -->
+            <div class="col-md-4 agileits-social top_content">
+                <ul class="social-nav model-3d-0 footer-social w3_agile_social">
+                    <li class="share">Share On : </li>
+                    <li>
+                        <a href="#" class="facebook">
+                            <div class="front"><i class="fab fa-facebook" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fab fa-facebook" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <div class="front"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="instagram">
+                            <div class="front"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                            <div class="back"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <!-- Start Main Top -->
+
+    <header class="main-header" style="border:4px solid purple ;background-color:aquamarine">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light  navbar-default bootsnav" style="border:2px solid green">
+            <div class="container" style="border:2px solid green">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header" style="border:2px solid green">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action("IndexCustomer","Home")"><img src="~/Content/Customer/images/logo.png" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="@Url.Action("IndexCustomer","Home")">Home</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("AboutCustomer","Home")">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("AboutCustomer","Home")">Feedback</a></li>
+
+                        <li class="dropdown">
+                            <a href="@Url.Action("ShopCustomer","Home")" class="nav-link dropdown-toggle fa fa-chevron-down " data-toggle="dropdown"> SHOP </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="@Url.Action("CartCustomer","Home")">Cart</a></li>
+                                <li><a href="@Url.Action("CheckoutCustomer","Home")">Checkout</a></li>
+                                <li><a href="@Url.Action("MyAccount","Home")">My Account</a></li>
+                                <li><a href="@Url.Action("WishlistCustomer","Home")">Wishlist</a></li>
+                                <li><a href="@Url.Action("ShopDetailCustomer","Home")">Shop Detail</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="nav-link dropdown-toggle fa fa-chevron-down" data-toggle="dropdown"> Product &raquo;</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Top</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="shop.html">Jackets</a></li>
+                                                    <li><a href="shop.html">Shirts</a></li>
+                                                    <li><a href="shop.html">Sweaters & Cardigans</a></li>
+                                                    <li><a href="shop.html">T-shirts</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Bottom</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="shop.html">Swimwear</a></li>
+                                                    <li><a href="shop.html">Skirts</a></li>
+                                                    <li><a href="shop.html">Jeans</a></li>
+                                                    <li><a href="shop.html">Trousers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Clothing</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="shop.html">Top Wear</a></li>
+                                                    <li><a href="shop.html">Party wear</a></li>
+                                                    <li><a href="shop.html">Bottom Wear</a></li>
+                                                    <li><a href="shop.html">Indian Wear</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Accessories</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="shop.html">Bags</a></li>
+                                                    <li><a href="shop.html">Sunglasses</a></li>
+                                                    <li><a href="shop.html">Fragrances</a></li>
+                                                    <li><a href="shop.html">Wallets</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                    </div>
+                                    <!-- end row -->
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("ContactCustomer","Home")">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="side-menu">
+                            <a href="#">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span class="badge">0</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="@Url.Action("Login","Home")">
+                                <i class="fa fa-user"></i>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
+            </div>
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                <li class="cart-box">
+
+                    <ul class="cart-list">
+                        <li>
+                            <a href="#" class="photo"><img src="~/Content/Customer/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
+                            <h6><a href="#">Delica omtantur </a></h6>
+                            <p>1x - <span class="price">$80.00</span></p>
+                        </li>
+                        <li>
+                            <a href="#" class="photo"><img src="~/Content/Customer/images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                            <h6><a href="#">Omnes ocurreret</a></h6>
+                            <p>1x - <span class="price">$60.00</span></p>
+                        </li>
+                        <li>
+                            <a href="#" class="photo"><img src="~/Content/Customer/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                            <h6><a href="#">Agam facilisis</a></h6>
+                            <p>1x - <span class="price">$40.00</span></p>
+                        </li>
+                        <li class="total">
+                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                            <span class="float-right"><strong>Total</strong>: $180.00</span>
+                        </li>
+                    </ul>
+
+                </li>
+            </div>
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+
+    @RenderBody()
+    <!-- login -->
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-info">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-spa">
+                    <div class="login-grids">
+                        <div class="login">
+                            <div class="login-bottom">
+                                <h3>Sign up for free</h3>
+                                <form>
+                                    <div class="sign-up">
+                                        <h4>Email :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                    </div>
+                                    <div class="sign-up">
+                                        <h4>Password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+
+                                    </div>
+                                    <div class="sign-up">
+                                        <h4>Re-type Password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+
+                                    </div>
+                                    <div class="sign-up">
+                                        <input type="submit" value="REGISTER NOW">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="login-right">
+                                <h3>Sign in with your account</h3>
+                                <form>
+                                    <div class="sign-in">
+                                        <h4>Email :</h4>
+                                        <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+                                    </div>
+                                    <div class="sign-in">
+                                        <h4>Password :</h4>
+                                        <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                                        <a href="#">Forgot password?</a>
+                                    </div>
+                                    <div class="single-bottom">
+                                        <input type="checkbox" id="brand" value="">
+                                        <label for="brand"><span></span>Remember Me.</label>
+                                    </div>
+                                    <div class="sign-in">
+                                        <input type="submit" value="SIGNIN">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //login -->
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body modal-body-sub_agile">
+                    <div class="col-md-8 modal_body_left modal_body_left1">
+                        <h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+                        <form action="#" method="post">
+                            <div class="styled-input agile-styled-input-top">
+                                <input type="text" name="Name" required="">
+                                <label>Name</label>
+                                <span></span>
+                            </div>
+                            <div class="styled-input">
+                                <input type="email" name="Email" required="">
+                                <label>Email</label>
+                                <span></span>
+                            </div>
+                            <input type="submit" value="Sign In">
+                        </form>
+                        <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
+                            <li>
+                                <a href="#" class="facebook">
+                                    <div class="front"><i class="fab fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="back"><i class="fab fa-facebook" aria-hidden="true"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter">
+                                    <div class="front"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+                                    <div class="back"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram">
+                                    <div class="front"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                                    <div class="back"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                        <div class="clearfix"></div>
+                        <p><a href="#" data-toggle="modal" data-target="#myModal2"> Don't have an account?</a></p>
+
+                    </div>
+                    <div class="col-md-4 modal_body_right modal_body_right1">
+                        <img src="~/Content/Customer/images/log_pic.jpg" alt=" " />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- //Modal content-->
+        </div>
+    </div>
+    <!-- //Modal1 -->
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body modal-body-sub_agile">
+                    <div class="col-md-8 modal_body_left modal_body_left1">
+                        <h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
+                        <form action="#" method="post">
+                            <div class="styled-input agile-styled-input-top">
+                                <input type="text" name="Name" required="">
+                                <label>Name</label>
+                                <span></span>
+                            </div>
+                            <div class="styled-input">
+                                <input type="email" name="Email" required="">
+                                <label>Email</label>
+                                <span></span>
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" name="password" required="">
+                                <label>Password</label>
+                                <span></span>
+                            </div>
+                            <div class="styled-input">
+                                <input type="password" name="Confirm Password" required="">
+                                <label>Confirm Password</label>
+                                <span></span>
+                            </div>
+                            <input type="submit" value="Sign Up">
+                        </form>
+                        <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
+                            <li>
+                                <a href="#" class="facebook">
+                                    <div class="front"><i class="fab fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="back"><i class="fab fa-facebook" aria-hidden="true"></i></div>
+                                </a>
+                            </li>
+                           
+                            <li>
+                                <a href="#" class="instagram">
+                                    <div class="front"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                                    <div class="back"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pinterest">
+                                    <div class="front"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+                                    <div class="back"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <p><a href="#">By clicking register, I agree to your terms</a></p>
+
+                    </div>
+                    <div class="col-md-4 modal_body_right modal_body_right1">
+                        <img src="~/Content/Customer/images/log_pic.jpg" alt=" " />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- //Modal content-->
+        </div>
+    </div>
+    <!-- //Modal2 -->
+    <!-- Start Footer  -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>About RIFAS-softs</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <ul>
+                                <li><a href="@Url.Action("IndexCustomer","Home")"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="@Url.Action("IndexCustomer","Home")"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="@Url.Action("IndexCustomer","Home")"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="@Url.Action("IndexCustomer","Home")">About Us</a></li>
+                                <li><a href="@Url.Action("IndexCustomer","Home")">Customer Service</a></li>
+                                <li><a href="@Url.Action("IndexCustomer","Home")">Privacy Policy</a></li>
+                                <li><a href="@Url.Action("IndexCustomer","Home")">Delivery Information</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">
+            Copyright &copy; @DateTime.Now.Year  All Rights Reserved |  <a href="#">RIFAS-softs</a>
+
+        </p>
+
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Content/Customer/js/jquery-3.2.1.min.js")
+    @Scripts.Render("~/Content/Customer/js/popper.min.js")
+    @Scripts.Render("~/Content/Customer/js/bootstrap.min.js")
+
+    @Scripts.Render("~/Content/Customer/js/jquery.superslides.min.js")
+    @Scripts.Render("~/Content/Customer/js/bootstrap-select.js")
+    @Scripts.Render("~/Content/Customer/js/inewsticker.js")
+    @Scripts.Render("~/Content/Customer/js/bootsnav.js")
+    @Scripts.Render("~/Content/Customer/js/images-loded.min.js")
+    @Scripts.Render("~/Content/Customer/js/isotope.min.js")
+    @Scripts.Render("~/Content/Customer/js/owl.carousel.min.js")
+    @Scripts.Render("~/Content/Customer/js/baguetteBox.min.js")
+    @Scripts.Render("~/Content/Customer/js/contact-form-script.js")
+    @Scripts.Render("~/Content/Customer/js/custom.js")
+    @Scripts.Render("~/Content/Customer/js/form-validator.min.js")
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+﻿@model IEnumerable<RifasSofts.Models.order>
+
+
+<center>
+    <h2> Order Invoice</h2>
+</center>
+@foreach (var o in Model)
+{
+
+
+    <table class="table  table-hover table-responsive">
+        <tr>
+            <td colspan="6" class="text-box text-danger text"> Order Detail</td>
+        </tr>
+        <tr>
+            <th>ORDER Number</th>
+            <td>@o.ORDER_ID </td>
+
+            <th>Person Name </th>
+            <td> @o.ORDER_NAME   </td>
+        </tr>
+        <tr>
+            <th>ORDER Date</th>
+            <td>@o.ORDER_DATE </td>
+
+            <td>Person Email</td>
+            <td> @o.ORDER_EMAIL   </td>
+        </tr>
+        <tr>
+            <th>ORDER Status</th>
+            <td>@o.ORDER_STATUS    </td>
+            <th>Person Contact</th>
+            <td> @o.ORDER_CONTACT   </td>
+
+        </tr>
+        <tr>
+            <th>ORDER Type</th>
+            <td>@o.ORDER_TYPE</td>
+            <th>Person Address</th>
+            <td> @o.ORDER_ADDRESS   </td>
+        </tr>
+    </table>
+    double totalAmount= 0;
+    int totaQuantity= 0;
+    <br />
+    <table class="table table-bordered table-hover table-responsive">
+        <tr>
+            <td colspan="6" class="text-box text-danger text"> Product Detail</td>
+        </tr>
+        <tr>
+            <th>Product Picture</th>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+            <th>Product Amount</th>
+        </tr>
+        @foreach (var od in o.orderDetails)
+        {
+            <tr>
+                <td><img style="height:100px; width:130px" src="@Url.Content(od.Prod.PROD_PICTURE)" /> </td>
+                <td> @od.Prod.PROD_NAME </td>
+                <td> @od.Prod.PROD_DESCRIPTION </td>
+                <td>
+                    @if (o.ORDER_TYPE == "Purchase")
+                    {
+                        @od.PURCHASE_PRICE
+                    }
+                    else
+                    {
+                        @od.SALE_PRICE
+                    }
+                </td>
+                <td>@od.QUANTITY  </td>
+                <td>
+                    @if (o.ORDER_TYPE == "Purchase")
+                    {
+                        @(double.Parse(od.PURCHASE_PRICE.ToString())*int.Parse(od.QUANTITY.ToString()))
+                    }
+                    else
+                    {
+                        @(double.Parse(od.SALE_PRICE.ToString())*int.Parse(od.QUANTITY.ToString()))
+                    }
+
+                </td>
+
+            </tr>
+            totaQuantity += int.Parse(od.QUANTITY.ToString());
+
+            if (o.ORDER_TYPE == "Purchase")
+                {
+                    totalAmount += (double.Parse(od.PURCHASE_PRICE.ToString()) * int.Parse(od.QUANTITY.ToString()));
+                }
+                else
+                {
+                    totalAmount += (double.Parse(od.SALE_PRICE.ToString()) * int.Parse(od.QUANTITY.ToString()));
+                }
+
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>@totaQuantity</td>
+                <td>
+
+                    @totalAmount
+                </td>
+            </tr>
+        }
+
+    </table>
+}
